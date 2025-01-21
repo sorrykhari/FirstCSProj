@@ -1,49 +1,90 @@
-﻿// First C# Project !!!
-/*
-double ratePerHour = 12.34;
-int numberOfHoursWorked = 165;
-int bonus = 100;
+﻿/* Practice section
+Console.WriteLine("Enter the number of the month you were born (1-12): ");
 
-double currentMonthWage = ratePerHour * numberOfHoursWorked + bonus;
-Console.WriteLine(currentMonthWage);
+int month = int.Parse(Console.ReadLine());
 
-ratePerHour += 3;
-Console.WriteLine(ratePerHour);
-
-if (currentMonthWage > 2000)
+switch (month)
 {
-    Console.WriteLine("You are a good worker");
+    case 1:
+        Console.WriteLine("January");
+        break;
+    case 2:
+        Console.WriteLine("Febraury");
+        break;
+    case 3:
+        Console.WriteLine("March");
+        break;
+    case 4:
+        Console.WriteLine("April");
+        break;
+    case 5:
+        Console.WriteLine("May");
+        break;
+    case 6:
+        Console.WriteLine("June");
+        break;
+    case 7:
+        Console.WriteLine("July");
+        break;
+    case 8:
+        Console.WriteLine("August");
+        break;
+    case 9:
+        Console.WriteLine("September");
+        break;
+    case 10:
+        Console.WriteLine("October");
+        break;
+    case 11:
+        Console.WriteLine("November");
+        break;
+    case 12:
+        Console.WriteLine("December");
+        break;
+    default:
+        Console.WriteLine("Month not valid");
+        break;
 }
-else
+
+Console.WriteLine("Enter a number 1-500");
+int num = int.Parse(Console.ReadLine());
+
+while (num < 1 || num > 500)
 {
-    Console.WriteLine("You are a bad worker");
+    if (num < 1)
+    {
+        Console.WriteLine("Number too low, try again: ");
+        num = int.Parse(Console.ReadLine());
+    }
+    else if (num > 500)
+    {
+        Console.WriteLine("Number too high, try again: ");
+        num = int.Parse(Console.ReadLine());
+    }
 }
 
-int numberOfEmployees = 15;
-numberOfEmployees--;
+Console.WriteLine($"You picked: {num}");
 
-bool a;
-int b;
+string[] jacksonFive = {"Michael", "Jackie", "Tito", "Marlin", "Jermaine"};
 
-int intMaxValue =int.MaxValue;
-int intMinValue = int.MinValue;
+for (int i = 0; i < jacksonFive.Length; i++)
+{
+    Console.WriteLine(jacksonFive[i]);
+}
 
-char userSelection = 'a'; // Chars use single quotes '' instead of double quotes like strings
-char upperSelection = char.ToUpper(userSelection);
+int AddTwoNumbers(int a, int b)
+{
+    return a + b;
+}
+
+int nuuum = AddTwoNumbers(1, 2);
+
+Console.WriteLine(nuuum);
 */
 
-DateTime hireDate = new DateTime(2022, 3, 28, 14, 30, 0);
+static void CalculateYearlyWage(int monthlyWage, int numbersOfMonthsWorked)
+{
+    Console.WriteLine($"Yearly wage: {monthlyWage * numbersOfMonthsWorked}");
+}
 
-DateTime startDate = hireDate.AddDays(15);
-
-Console.WriteLine(startDate.ToLongDateString());
-Console.WriteLine(startDate.ToShortDateString());
-Console.WriteLine(startDate.IsDaylightSavingTime());
-
-TimeSpan workTime = new TimeSpan(8, 35, 0);
-DateTime endHour = startDate.Add(workTime);
-DateTime exitDate = new DateTime(2025, 12, 11);
-
-Console.WriteLine(endHour);
-
- 
+CalculateYearlyWage(6500, 12);
