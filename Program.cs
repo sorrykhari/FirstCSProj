@@ -82,9 +82,17 @@ int nuuum = AddTwoNumbers(1, 2);
 Console.WriteLine(nuuum);
 */
 
-static void CalculateYearlyWage(int monthlyWage, int numbersOfMonthsWorked)
+int amount = 6500;
+
+int months = 12;
+
+int yearlyWage = CalculateYearlyWage(amount, months);
+
+Console.WriteLine($"Yearly wage: {yearlyWage}");
+
+static int CalculateYearlyWage(int monthlyWage, int numbersOfMonthsWorked)
 {
-    Console.WriteLine($"Yearly wage: {monthlyWage * numbersOfMonthsWorked}");
+    //Console.WriteLine($"Yearly wage: {monthlyWage * numbersOfMonthsWorked}");
+    return monthlyWage * numbersOfMonthsWorked;
 }
 
-CalculateYearlyWage(6500, 12);
