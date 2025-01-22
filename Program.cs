@@ -1,4 +1,5 @@
-﻿/* Practice section
+﻿using FirstCSProj;
+/* Practice section
 Console.WriteLine("Enter the number of the month you were born (1-12): ");
 
 int month = int.Parse(Console.ReadLine());
@@ -86,13 +87,6 @@ int amount = 6500;
 
 int months = 12;
 
-int yearlyWage = CalculateYearlyWage(amount, months);
+int yearlyWage = Utilities.CalculateYearlyWage(amount, months);
 
 Console.WriteLine($"Yearly wage: {yearlyWage}");
-
-static int CalculateYearlyWage(int monthlyWage, int numbersOfMonthsWorked)
-{
-    //Console.WriteLine($"Yearly wage: {monthlyWage * numbersOfMonthsWorked}");
-    return monthlyWage * numbersOfMonthsWorked;
-}
-
