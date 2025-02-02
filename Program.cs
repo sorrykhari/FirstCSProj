@@ -1,4 +1,5 @@
 ﻿using FirstCSProj;
+
 /* Practice section
 Console.WriteLine("Enter the number of the month you were born (1-12): ");
 
@@ -81,12 +82,23 @@ int AddTwoNumbers(int a, int b)
 int nuuum = AddTwoNumbers(1, 2);
 
 Console.WriteLine(nuuum);
-*/
+
+ */
 
 int amount = 6500;
-
 int months = 12;
+int bonus = 7000; 
 
 int yearlyWage = Utilities.CalculateYearlyWage(amount, months);
 
 Console.WriteLine($"Yearly wage: {yearlyWage}");
+
+static void FuckMeNigga(string name) {
+    Console.WriteLine($"Fuck me nigga fuck meeee fuck me {name}");
+}
+
+FuckMeNigga("Kai");
+
+int nearlyWage = Utilities.CalculateYearlyWage(amount, months, bonus);
+
+Console.WriteLine(nearlyWage);

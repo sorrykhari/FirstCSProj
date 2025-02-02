@@ -19,5 +19,16 @@ namespace FirstCSProj
             return monthlyWage * numbersOfMonthsWorked;
         }
 
+        public static int CalculateYearlyWage(int monthlyWage, int numbersOfMonthsWorked, int bonus)
+        {
+            //Console.WriteLine($"Yearly wage: {monthlyWage * numbersOfMonthsWorked}");
+            if (numbersOfMonthsWorked == 12)
+            {
+                return monthlyWage * (numbersOfMonthsWorked + bonus);
+            }
+
+            return monthlyWage * numbersOfMonthsWorked + bonus;
+        }
+
     }
 }
