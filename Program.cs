@@ -6,15 +6,17 @@ namespace FirstCSProj
     {
         static void Main(string[] args)
         {
-            Console.Write("Fuck\nYounigga");
-            Console.WriteLine("Fuck you nigga.");
-            Console.WriteLine("Fuck me nigga.");
-            Console.Beep();
-            Console.ReadKey();
+            // Find hypotenuse
+            Console.WriteLine("Enter side A: ");
+            double a = Convert.ToDouble(Console.ReadLine());
 
-            int x; // declaration
-            x = 123; // initialization
-            // This is a comment lol
+            Console.WriteLine("Enter side B: ");
+            double b = Convert.ToDouble(Console.ReadLine());
+
+            double c = Math.Sqrt((a * a) + (b * b));
+
+            Console.WriteLine($"The hypotenuse is {c}");
+            Console.ReadKey();
         }
     }
 }
