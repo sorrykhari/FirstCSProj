@@ -6,71 +6,89 @@ namespace FirstCSProj
     {
         static void Main(string[] args)
         {
-            /* Math
-             * 
-            // Find hypotenuse
-            Console.WriteLine("Enter side A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
+            Random random = new Random();
+            bool playAgain = true;
+            String player;
+            String computerChoice;
+            String playOption;
+            int number;
+            int wins = 0, losses =  0, ties = 0;
 
-            Console.WriteLine("Enter side B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
-
-            double c = Math.Sqrt((a * a) + (b * b));
-
-            Console.WriteLine($"The hypotenuse is {c}");
-            
-            String fullName = "Kai Mobley";
-            String phoneNumber = "732-422-3771";
-            String userName = "enjeeeeb";
-            String firstName = fullName.Substring(0, 3);
-            String lastName = fullName.Substring(4);
-
-            Console.WriteLine(firstName + " " + lastName);
-            Console.WriteLine(phoneNumber.Replace("-", " "));
-            Console.WriteLine(userName.Length);
-            Console.ReadKey();
-            
-
-            // If statements
-            Console.WriteLine("Please enter your age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
-
-             if (age < 0)
+            while (playAgain)
             {
-                Console.WriteLine("Please enter a valid age.");
-            }
-             else if (age < 18)
-            {
-                Console.WriteLine("You're not old enough, sorry.");
-            }
-             else if (age > 100)
-            {
-                Console.WriteLine("You're way too old for this unc.");
-            }
-             else
-            {
-                Console.WriteLine("Here's your license.");
+                Console.Write("Rock, Paper or Scissors: ");
+                player = Console.ReadLine();
+                player = player.ToLower();
+                number = random.Next(1, 100);
+                
+                if (number <= 33)
+                {
+                    computerChoice = "rock";
+                }
+                else if (number <= 66)
+                {
+                    computerChoice = "paper";
+                }
+                else
+                {
+                    computerChoice = "scissors";
+                }
+
+                if (player != "rock" && player != "paper" && player != "scissors")
+                {
+                    Console.WriteLine("Invalid option, try again.");
+                }
+                else
+                {
+                    if (player == computerChoice)
+                    {
+                        Console.WriteLine("It's a tie!");
+                        ties++;
+                    }
+                    else if ((player == "rock" && computerChoice == "paper") || 
+                        (player == "paper" && computerChoice == "scissors") || 
+                        (player == "scissors" && computerChoice == "rock")) {
+                        Console.WriteLine("You lose. Try again.");
+                        losses++;
+                    }
+                    else if ((computerChoice == "rock" && player == "paper") ||
+                        (computerChoice == "paper" && player == "scissors") ||
+                        (computerChoice == "scissors" && player == "rock"))
+                    {
+                        Console.WriteLine("You win.");
+                        wins++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Are you fucking retarded?");
+                    }
+
+                    
+                    Console.Write($"Wins: {wins} Losses: {losses} Ties: {ties}\nPlay again? (y/n): ");
+                    playOption = Console.ReadLine();
+                    if (playOption.ToLower() == "n") 
+                    {
+                        playAgain = false;
+                    }
+                    else if (playOption.ToLower() == "y")
+                    {
+                        playAgain = true;
+                    }
+                    else
+                    {
+                        Console.Write("Invalid option. Exiting now.");
+                        break;
+                    }
+      
+                }
+
+
+
+
+
             }
 
-            Console.ReadKey();
-            */
-            Console.WriteLine("Please enter your name: ");
-            String name = Console.ReadLine();
-
-            if (name == "")
-            {
-                Console.WriteLine("You didn't enter a name.");
-            }
-            else if (name != "")
-            {
-                Console.WriteLine($"Hello {name}.");
-            }
-            else
-            {
-                Console.WriteLine("Just fuck off mane.");
-            }
-
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }
