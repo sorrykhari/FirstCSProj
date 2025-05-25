@@ -8,17 +8,6 @@ namespace FirstCSProj
 {
     public static class Messages
     {
-        public static void Hello()
-        {
-            Console.WriteLine("Hiiii :p");
-        }
-        public static void Waiting()
-        {
-            Console.WriteLine("I'm waitinggggg");
-        }
-        public static void Bye()
-        {
-            Console.WriteLine("See ya!");
-        }
+        
     }
 }
