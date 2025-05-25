@@ -361,7 +361,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-
-#Key Files (idk)
-key_file
-key_file.pub

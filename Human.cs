@@ -8,30 +8,30 @@ namespace FirstCSProj
 {
     public class Human
     {
-        public string Name { get; private set; }
-        public int Age { get; private set; }
+        public string name;
+        public int age;
         static int numberOfPeople;
 
         // Constructors
         public Human(String name)
         {
-            this.Name = name;
+            this.name = name;
             numberOfPeople++;
         }
         public Human(String name, int age)
         {
-            this.Name = name;
-            this.Age = age;
+            this.name = name;
+            this.age = age;
             numberOfPeople++;
         }
         // Methods
         public void Eat()
         {
-            Console.WriteLine($"{Name} is eating.");
+            Console.WriteLine($"{name} is eating.");
         }
         public void Sleep()
         {
-            Console.WriteLine($"{Name} is sleeping.");
+            Console.WriteLine($"{name} is sleeping.");
         }
         // Static Method
         public static void HowManyPeople()
@@ -44,9 +44,33 @@ namespace FirstCSProj
             {
                 Console.WriteLine("There is 1 person.");
             }
-            
+
         }
 
     }
 
+    public class Ninja : Human
+    {
+        public string skill;
+        public string weapon;
+        public int level;
+        public Ninja(string name, string skill, string weapon, int level) : base(name)
+        {
+            this.skill = skill;
+            this.weapon = weapon;
+            this.level = level;
+        }
+
+        public void UseSkill()
+        {
+            if (level > 10)
+            {
+                Console.WriteLine($"{name} uses {skill} with {weapon} at level {level}.");
+            }
+            else
+            {
+                Console.WriteLine($"{name} is not skilled enough to use {skill}. Must be level 10 or higher.");
+            }
+        }
+    }
 }
