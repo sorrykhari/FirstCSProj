@@ -17,7 +17,7 @@ namespace FirstCSProj
             jermaine.Sleep();
 
             Human marlon = new Human("Marlon", 15);
-            marlopn.sleep
+            marlopn.sleep;
 
             Ninja michael = new Ninja("Michael", "Spin-Kick", "Kunai", 5);
             michael.Eat();
