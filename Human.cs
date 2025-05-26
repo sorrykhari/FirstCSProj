@@ -54,7 +54,7 @@ namespace FirstCSProj
         public string skill;
         public string weapon;
         public int level;
-        public Ninja(string name, string skill, string weapon, int level) : base(name)
+        public Ninja(string name, string skill, string weapon, int age, int level) : base(name)
         {
             this.skill = skill;
             this.weapon = weapon;
@@ -72,5 +72,6 @@ namespace FirstCSProj
                 Console.WriteLine($"{name} is not skilled enough to use {skill}. Must be level 10 or higher.");
             }
         }
+
     }
 }
